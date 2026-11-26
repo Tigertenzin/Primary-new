@@ -2164,7 +2164,7 @@ settings:
         id: readme-content
         type: info-text
         markdown: true
-        description: 🎨 Visit the [Note Embed Presets](https://primary-theme.github.io/presets/note-embed) in the Full Guide and check if you have any preferred ready-to-go style presets there, or if you want some inspiration on styling your embeds.
+        description: 🎨 Visit the [Note Embed Presets](https://primary-theme.github.io/guides/presets/note-embed) in the Full Guide and check if you have any preferred ready-to-go style presets there, or if you want some inspiration on styling your embeds.
     -
         id: embed-max-height
         type: variable-text

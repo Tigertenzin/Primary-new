@@ -3551,7 +3551,11 @@ button[disabled=true] {
 
 .modal-close-button {
   width: var(--modal-close-button-size);
-  height: fit-content;
+  height: var(--modal-close-button-size);
+  padding: 0;
+}
+.modal-close-button svg.svg-icon {
+  --icon-size: calc(var(--modal-close-button-size) - 6px);
 }
 
 body.is-phone .modal-close-button.mod-raised {
@@ -7530,9 +7534,18 @@ body.file-header-title-hover .view-header-title-container:hover {
   opacity: 1;
 }
 
+body.active-line-highlight {
+  /* Run the highlight across the whole pane. It used to be extended with
+     box-shadow copies shifted by 25vw, which left gaps whenever the text
+     column was narrower than that, e.g. readable line length on a wide
+     screen (upstream #260). A filled border-image pushed outwards paints
+     one continuous strip without changing layout or adding scrollbars. */
+}
 body.active-line-highlight .cm-active {
   background: var(--active-line-bg);
-  box-shadow: -25vw 0 var(--active-line-bg), 25vw 0 var(--active-line-bg);
+}
+body.active-line-highlight .cm-line.cm-active {
+  border-image: conic-gradient(var(--active-line-bg) 0 0) fill 0/0/0 100vw;
 }
 
 /*────────── Style Settings: Notes and Files ──────────*/

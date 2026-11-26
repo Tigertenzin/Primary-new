@@ -316,7 +316,15 @@ body.file-header-title-hover {
 body.active-line-highlight {
     .cm-active {
         background: var(--active-line-bg);
-        box-shadow: -25vw 0 var(--active-line-bg), 25vw 0 var(--active-line-bg);
+    }
+
+    /* Run the highlight across the whole pane. It used to be extended with
+       box-shadow copies shifted by 25vw, which left gaps whenever the text
+       column was narrower than that, e.g. readable line length on a wide
+       screen (upstream #260). A filled border-image pushed outwards paints
+       one continuous strip without changing layout or adding scrollbars. */
+    .cm-line.cm-active {
+        border-image: conic-gradient(var(--active-line-bg) 0 0) fill 0 / 0 / 0 100vw;
     }
 }
 

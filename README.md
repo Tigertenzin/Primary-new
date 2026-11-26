@@ -23,6 +23,9 @@
 > - Blockquotes use a warm tint of the page with a clearer bar instead of a near-white box (upstream #272)
 > - Unticked task checkboxes have stronger borders; the `---` divider is easier to see in dark mode (upstream #276, #270)
 > - Bases cards and kanban cards lift slightly on hover, like Primary's buttons
+> - Active line highlight reaches both edges of the pane on wide screens with readable line length (upstream #260)
+> - The × in the red close button is centred, and the button is round again (upstream #252)
+> - Fixed the broken "Note Embed Presets" guide link in Style Settings (upstream #274)
 
 ![Primary for Obsidian Overview](https://github.com/primary-theme/obsidian/blob/main/assets/obsidian-overview-header.png)
 <h1 align="center">Primary for <a href="https://obsidian.md">Obsidian</a></h1>

@@ -134,9 +134,17 @@ button[disabled="true"] {
     }
 }
 
+// A square button with the × centred in it. `height: fit-content` plus
+// Obsidian's padding made it taller than wide and squeezed the icon into a
+// narrow box, so the × sat off-centre (upstream #252).
 .modal-close-button {
     width: var(--modal-close-button-size);
-    height: fit-content;
+    height: var(--modal-close-button-size);
+    padding: 0;
+
+    svg.svg-icon {
+        --icon-size: calc(var(--modal-close-button-size) - 6px);
+    }
 }
 
 // Phones: Obsidian 1.9+ marks the close button `.mod-raised` and paints it
