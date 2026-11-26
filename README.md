@@ -8,6 +8,13 @@
 > Changes in this fork:
 > - Mobile toolbar scrolls again and is no longer drawn as a double box on iPad (upstream #282, #285, #288, #290)
 > - Properties box on mobile: inner panel no longer spills past the border
+> - Callouts and canvas cards get their colours back on Obsidian 1.13+ (upstream PRs #292, #293, reworked so saved Style Settings canvas colours keep working)
+> - Fire `[f]`, win `[w]` and key `[k]` alternate checkboxes render again, with Style Settings colours; the location `[l]` colour setting now works (upstream #281)
+> - No more doubled × / repeated icons; red close button visible again on phones (upstream #285)
+> - Header icons no longer stay coloured after a tap on touch screens (upstream #285)
+> - Mobile sidebar properties: no stray boxes around names and dates (upstream #262)
+> - Clicking or arrowing below a Tasks query with `hide toolbar`/`hide task count` lands on the right line (upstream #294)
+> - Math blocks only show a scrollbar when the formula overflows (upstream PR #261)
 
 ![Primary for Obsidian Overview](https://github.com/primary-theme/obsidian/blob/main/assets/obsidian-overview-header.png)
 <h1 align="center">Primary for <a href="https://obsidian.md">Obsidian</a></h1>

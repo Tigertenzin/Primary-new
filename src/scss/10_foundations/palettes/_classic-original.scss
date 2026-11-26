@@ -874,7 +874,7 @@ body {
     --star-chbx-color: hsla(40, 93%, 51%, 1);
     --star-chbx-icon-color: white;
     --note-chbx-color: hsla(8, 51%, 53%, 1);
-    --location-chbox-color: hsla(0, 56%, 48%, 1);
+    --location-chbx-color: hsla(0, 56%, 48%, 1);
     --info-chbx-color: hsla(178, 29%, 45%, 1);
     --info-chbx-icon-color: white;
     --amount-chbx-color: hsla(152, 42%, 41%, 1);
@@ -886,6 +886,9 @@ body {
     --pro-chbx-color: hsla(149, 34%, 44%, 1);
     --con-chbx-color: hsla(12, 62%, 45%, 1);
     --bookmark-chbx-color: hsla(21, 81%, 59%, 1);
+    --fire-chbx-color: hsla(17, 77%, 55%, 1);
+    --win-chbx-color: hsla(42, 80%, 50%, 1);
+    --key-chbx-color: hsla(40, 52%, 55%, 1);
     --up-chbx-color: hsla(146, 37%, 49%, 1);
     --down-chbx-color: hsla(4, 56%, 48%, 1);
     --law-chbx-color: hsla(34, 34%, 52%, 1);
@@ -1526,13 +1529,13 @@ body {
 
     /* Canvas */
     --canvas-background: var(--editor-bg-color);
-    --canvas-color: var(--color-gray-rgb);
-    --canvas-color-1: var(--color-red-rgb);
-    --canvas-color-2: var(--color-orange-rgb);
-    --canvas-color-3: var(--color-yellow-rgb);
-    --canvas-color-4: var(--color-green-rgb);
-    --canvas-color-5: var(--color-blue-rgb);
-    --canvas-color-6: var(--color-purple-rgb);
+    --canvas-color: rgb(var(--color-gray-rgb));
+    --canvas-color-1: rgb(var(--color-red-rgb));
+    --canvas-color-2: rgb(var(--color-orange-rgb));
+    --canvas-color-3: rgb(var(--color-yellow-rgb));
+    --canvas-color-4: rgb(var(--color-green-rgb));
+    --canvas-color-5: rgb(var(--color-blue-rgb));
+    --canvas-color-6: rgb(var(--color-purple-rgb));
 
     --canvas-icon-color: var(--color-l-gray-80);
     --canvas-icon-color-hover: var(--color-l-gray-120);
@@ -2002,7 +2005,7 @@ body {
     --star-chbx-color: hsla(40, 95%, 46%, 1);
     --star-chbx-icon-color: white;
     --note-chbx-color: hsla(8, 51%, 53%, 1);
-    --location-chbox-color: hsla(0, 56%, 48%, 1);
+    --location-chbx-color: hsla(0, 56%, 48%, 1);
     --info-chbx-color: hsla(178, 31%, 41%, 1);
     --info-chbx-icon-color: white;
     --amount-chbx-color: hsla(152, 46%, 38%, 1);
@@ -2014,6 +2017,9 @@ body {
     --pro-chbx-color: hsla(149, 36%, 47%, 1);
     --con-chbx-color: hsla(12, 64%, 47%, 1);
     --bookmark-chbx-color: hsla(21, 81%, 54%, 1);
+    --fire-chbx-color: hsla(17, 77%, 51%, 1);
+    --win-chbx-color: hsla(42, 82%, 47%, 1);
+    --key-chbx-color: hsla(40, 50%, 58%, 1);
     --up-chbx-color: hsla(146, 38%, 51%, 1);
     --down-chbx-color: hsla(4, 56%, 54%, 1);
     --law-chbx-color: hsla(34, 34%, 52%, 1);
@@ -2678,15 +2684,15 @@ body {
     --canvas-background: var(--editor-bg-color);
 
     &.theme-dark {
-        --canvas-color: var(--color-gray-rgb);
+        --canvas-color: rgb(var(--color-gray-rgb));
     }
 
-    --canvas-color-1: var(--color-red-rgb);
-    --canvas-color-2: var(--color-orange-rgb);
-    --canvas-color-3: var(--color-yellow-rgb);
-    --canvas-color-4: var(--color-green-rgb);
-    --canvas-color-5: var(--color-blue-rgb);
-    --canvas-color-6: var(--color-purple-rgb);
+    --canvas-color-1: rgb(var(--color-red-rgb));
+    --canvas-color-2: rgb(var(--color-orange-rgb));
+    --canvas-color-3: rgb(var(--color-yellow-rgb));
+    --canvas-color-4: rgb(var(--color-green-rgb));
+    --canvas-color-5: rgb(var(--color-blue-rgb));
+    --canvas-color-6: rgb(var(--color-purple-rgb));
 
     --canvas-icon-color: var(--color-d-gray-50);
     --canvas-icon-color-hover: var(--color-d-gray-30);

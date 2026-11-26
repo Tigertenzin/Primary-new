@@ -39,7 +39,8 @@ video {
 
 // Mathjax | LaTeX
 .markdown-preview-view .math-block {
-    overflow: scroll;
+    // auto, not scroll: only show a scrollbar on formulas that overflow (#253)
+    overflow: auto;
     width: 100%;
 }
 

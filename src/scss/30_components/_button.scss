@@ -139,6 +139,22 @@ button[disabled="true"] {
     height: fit-content;
 }
 
+// Phones: Obsidian 1.9+ marks the close button `.mod-raised` and paints it
+// with a translucent "raised" background, which hid Primary's red button and
+// left a white × on near-white (upstream #285). Keep Primary's red button.
+body.is-phone .modal-close-button.mod-raised {
+    // Obsidian's switch for the raised/glass effect: every raised property
+    // reads var(--raised, <glass value>), so `none` turns blur, shadow,
+    // border and the iOS highlight layer off.
+    --raised: none;
+    color: var(--text-on-accent);
+    background: var(--background-modifier-error);
+
+    &:hover {
+        background: var(--background-modifier-error-hover);
+    }
+}
+
 // Property Box Add Property Button
 .metadata-container .metadata-add-button {
     font-weight: var(--component-font-weight);

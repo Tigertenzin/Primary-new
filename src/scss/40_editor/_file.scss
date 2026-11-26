@@ -5,14 +5,20 @@
     --header-height: 38px;
 
     // Right Side Action Icons
+    // Hover colours only on devices that really hover: on touch screens
+    // :hover sticks to the last tapped icon until you tap elsewhere (#285).
     .view-action.clickable-icon {
         &:nth-child(3n+1) {
-            &:hover {
-                color: var(--alternating-color-1);
+            @media (hover: hover) {
+                &:hover {
+                    color: var(--alternating-color-1);
+                }
             }
 
-            &.mod-filled:hover svg {
-                fill: var(--alternating-color-1);
+            @media (hover: hover) {
+                &.mod-filled:hover svg {
+                    fill: var(--alternating-color-1);
+                }
             }
 
             &:active,
@@ -26,12 +32,16 @@
         }
 
         &:nth-child(3n+2) {
-            &:hover {
-                color: var(--alternating-color-2);
+            @media (hover: hover) {
+                &:hover {
+                    color: var(--alternating-color-2);
+                }
             }
 
-            &.mod-filled:hover svg {
-                fill: var(--alternating-color-2);
+            @media (hover: hover) {
+                &.mod-filled:hover svg {
+                    fill: var(--alternating-color-2);
+                }
             }
 
             &:active,
@@ -45,12 +55,16 @@
         }
 
         &:nth-child(3n+3) {
-            &:hover {
-                color: var(--alternating-color-3);
+            @media (hover: hover) {
+                &:hover {
+                    color: var(--alternating-color-3);
+                }
             }
 
-            &.mod-filled:hover svg {
-                fill: var(--alternating-color-3);
+            @media (hover: hover) {
+                &.mod-filled:hover svg {
+                    fill: var(--alternating-color-3);
+                }
             }
 
             &:active,
@@ -58,7 +72,7 @@
                 color: var(--alternating-color-3-hover-active);
             }
 
-            &.mod-filled:hover svg {
+            &.mod-filled:active svg {
                 fill: var(--alternating-color-3-hover-active);
             }
         }

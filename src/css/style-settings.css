@@ -2065,6 +2065,30 @@ settings:
         default-light: 'hsla(21, 81%, 59%, 1)'
         default-dark: 'hsla(21, 81%, 54%, 1)'
     -
+        id: fire-chbx-color
+        type: variable-themed-color
+        title: Fire [f] Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(17, 77%, 55%, 1)'
+        default-dark: 'hsla(17, 77%, 51%, 1)'
+    -
+        id: win-chbx-color
+        type: variable-themed-color
+        title: Win [w] Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(42, 80%, 50%, 1)'
+        default-dark: 'hsla(42, 82%, 47%, 1)'
+    -
+        id: key-chbx-color
+        type: variable-themed-color
+        title: Key [k] Color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(40, 52%, 55%, 1)'
+        default-dark: 'hsla(40, 50%, 58%, 1)'
+    -
         id: up-chbx-color
         type: variable-themed-color
         title: Up Trend Line [u] Color
@@ -2358,7 +2382,7 @@ settings:
         id: canvas-color
         type: variable-themed-color
         title: Canvas Color 1
-        format: rgb-values
+        format: rgb
         opacity: false
         default-light: 'rgb(182, 175, 166)'
         default-dark: 'rgb(182, 175, 166)'
@@ -2366,7 +2390,7 @@ settings:
         id: canvas-color-1
         type: variable-themed-color
         title: Canvas Color 2
-        format: rgb-values
+        format: rgb
         opacity: false
         default-light: 'rgb(223, 90, 90)'
         default-dark: 'rgb(223, 90, 90)'
@@ -2374,7 +2398,7 @@ settings:
         id: canvas-color-2
         type: variable-themed-color
         title: Canvas Color 3
-        format: rgb-values
+        format: rgb
         opacity: false
         default-light: 'rgb(231, 130, 63)'
         default-dark: 'rgb(231, 130, 63)'
@@ -2382,7 +2406,7 @@ settings:
         id: canvas-color-3
         type: variable-themed-color
         title: Canvas Color 4
-        format: rgb-values
+        format: rgb
         opacity: false
         default-light: 'rgb(248, 197, 46)'
         default-dark: 'rgb(248, 197, 46)'
@@ -2390,7 +2414,7 @@ settings:
         id: canvas-color-4
         type: variable-themed-color
         title: Canvas Color 5
-        format: rgb-values
+        format: rgb
         opacity: false
         default-light: 'rgb(87, 185, 132)'
         default-dark: 'rgb(87, 185, 132)'
@@ -2398,7 +2422,7 @@ settings:
         id: canvas-color-5
         type: variable-themed-color
         title: Canvas Color 6
-        format: rgb-values
+        format: rgb
         opacity: false
         default-light: 'rgb(99, 164, 198)'
         default-dark: 'rgb(99, 164, 198)'
@@ -2406,7 +2430,7 @@ settings:
         id: canvas-color-6
         type: variable-themed-color
         title: Canvas Color 7
-        format: rgb-values
+        format: rgb
         opacity: false
         default-light: 'rgb(135, 106, 193)'
         default-dark: 'rgb(135, 106, 193)'

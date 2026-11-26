@@ -19,8 +19,10 @@ input[type='number'] {
     }
 
     // Mobile
-    .workspace-drawer &,
-    .is-mobile .modal & {
+    // (not property fields: Obsidian lays those out as borderless rows with
+    // dividers, and a box around each key/value looked broken - #262)
+    .workspace-drawer &:not(.metadata-container *),
+    .is-mobile .modal &:not(.metadata-container *) {
         border: 1px solid var(--background-modifier-border);
     }
 }

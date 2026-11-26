@@ -18,11 +18,13 @@ body:is(.is-phone, .is-mobile) .workspace-drawer-tab-option-item-icon {
   color: var(--icon-color);
 }
 
-.is-mobile .clickable-icon:hover,
-.clickable-icon:hover {
-  color: var(--icon-color-hover);
-  background: var(--icon-bg-hover);
-  cursor: var(--cursor);
+@media (hover: hover) {
+  .is-mobile .clickable-icon:hover,
+  .clickable-icon:hover {
+    color: var(--icon-color-hover);
+    background: var(--icon-bg-hover);
+    cursor: var(--cursor);
+  }
 }
 .is-mobile .clickable-icon:active,
 .clickable-icon:active {
@@ -184,6 +186,9 @@ svg.snap-to-object,
 svg.uppercase-lowercase-a,
 svg.vault {
   background-color: currentColor;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
 }
 
 /* General Icon Replacements */
@@ -1387,7 +1392,7 @@ body.is-mobile {
   --star-chbx-color: hsla(40, 93%, 51%, 1);
   --star-chbx-icon-color: white;
   --note-chbx-color: hsla(8, 51%, 53%, 1);
-  --location-chbox-color: hsla(0, 56%, 48%, 1);
+  --location-chbx-color: hsla(0, 56%, 48%, 1);
   --info-chbx-color: hsla(178, 29%, 45%, 1);
   --info-chbx-icon-color: white;
   --amount-chbx-color: hsla(152, 42%, 41%, 1);
@@ -1399,6 +1404,9 @@ body.is-mobile {
   --pro-chbx-color: hsla(149, 34%, 44%, 1);
   --con-chbx-color: hsla(12, 62%, 45%, 1);
   --bookmark-chbx-color: hsla(21, 81%, 59%, 1);
+  --fire-chbx-color: hsla(17, 77%, 55%, 1);
+  --win-chbx-color: hsla(42, 80%, 50%, 1);
+  --key-chbx-color: hsla(40, 52%, 55%, 1);
   --up-chbx-color: hsla(146, 37%, 49%, 1);
   --down-chbx-color: hsla(4, 56%, 48%, 1);
   --law-chbx-color: hsla(34, 34%, 52%, 1);
@@ -1913,13 +1921,13 @@ body.is-mobile {
   /*────────── Core Plugins ──────────*/
   /* Canvas */
   --canvas-background: var(--editor-bg-color);
-  --canvas-color: var(--color-gray-rgb);
-  --canvas-color-1: var(--color-red-rgb);
-  --canvas-color-2: var(--color-orange-rgb);
-  --canvas-color-3: var(--color-yellow-rgb);
-  --canvas-color-4: var(--color-green-rgb);
-  --canvas-color-5: var(--color-blue-rgb);
-  --canvas-color-6: var(--color-purple-rgb);
+  --canvas-color: rgb(var(--color-gray-rgb));
+  --canvas-color-1: rgb(var(--color-red-rgb));
+  --canvas-color-2: rgb(var(--color-orange-rgb));
+  --canvas-color-3: rgb(var(--color-yellow-rgb));
+  --canvas-color-4: rgb(var(--color-green-rgb));
+  --canvas-color-5: rgb(var(--color-blue-rgb));
+  --canvas-color-6: rgb(var(--color-purple-rgb));
   --canvas-icon-color: var(--color-l-gray-80);
   --canvas-icon-color-hover: var(--color-l-gray-120);
   --canvas-icon-color-disabled: var(--color-l-gray-60);
@@ -2313,7 +2321,7 @@ body.is-mobile {
   --star-chbx-color: hsla(40, 95%, 46%, 1);
   --star-chbx-icon-color: white;
   --note-chbx-color: hsla(8, 51%, 53%, 1);
-  --location-chbox-color: hsla(0, 56%, 48%, 1);
+  --location-chbx-color: hsla(0, 56%, 48%, 1);
   --info-chbx-color: hsla(178, 31%, 41%, 1);
   --info-chbx-icon-color: white;
   --amount-chbx-color: hsla(152, 46%, 38%, 1);
@@ -2325,6 +2333,9 @@ body.is-mobile {
   --pro-chbx-color: hsla(149, 36%, 47%, 1);
   --con-chbx-color: hsla(12, 64%, 47%, 1);
   --bookmark-chbx-color: hsla(21, 81%, 54%, 1);
+  --fire-chbx-color: hsla(17, 77%, 51%, 1);
+  --win-chbx-color: hsla(42, 82%, 47%, 1);
+  --key-chbx-color: hsla(40, 50%, 58%, 1);
   --up-chbx-color: hsla(146, 38%, 51%, 1);
   --down-chbx-color: hsla(4, 56%, 54%, 1);
   --law-chbx-color: hsla(34, 34%, 52%, 1);
@@ -2843,12 +2854,12 @@ body.is-mobile {
   /*────────── Core Plugins ──────────*/
   /* Canvas */
   --canvas-background: var(--editor-bg-color);
-  --canvas-color-1: var(--color-red-rgb);
-  --canvas-color-2: var(--color-orange-rgb);
-  --canvas-color-3: var(--color-yellow-rgb);
-  --canvas-color-4: var(--color-green-rgb);
-  --canvas-color-5: var(--color-blue-rgb);
-  --canvas-color-6: var(--color-purple-rgb);
+  --canvas-color-1: rgb(var(--color-red-rgb));
+  --canvas-color-2: rgb(var(--color-orange-rgb));
+  --canvas-color-3: rgb(var(--color-yellow-rgb));
+  --canvas-color-4: rgb(var(--color-green-rgb));
+  --canvas-color-5: rgb(var(--color-blue-rgb));
+  --canvas-color-6: rgb(var(--color-purple-rgb));
   --canvas-icon-color: var(--color-d-gray-50);
   --canvas-icon-color-hover: var(--color-d-gray-30);
   --canvas-icon-color-disabled: var(--color-d-gray-70);
@@ -2947,7 +2958,7 @@ body.is-mobile {
   --modal-background: var(--background-primary);
 }
 .theme-dark.theme-dark {
-  --canvas-color: var(--color-gray-rgb);
+  --canvas-color: rgb(var(--color-gray-rgb));
 }
 .theme-dark #calendar-container {
   --color-dot: var(--color-d-blue-20);
@@ -3529,6 +3540,15 @@ button[disabled=true] {
 .modal-close-button {
   width: var(--modal-close-button-size);
   height: fit-content;
+}
+
+body.is-phone .modal-close-button.mod-raised {
+  --raised: none;
+  color: var(--text-on-accent);
+  background: var(--background-modifier-error);
+}
+body.is-phone .modal-close-button.mod-raised:hover {
+  background: var(--background-modifier-error-hover);
 }
 
 .metadata-container .metadata-add-button {
@@ -4656,23 +4676,23 @@ input[type=number][disabled=true] {
   opacity: var(--disabled-component-opacity);
   cursor: not-allowed;
 }
-.workspace-drawer textarea, .is-mobile .modal textarea,
-.workspace-drawer input.metadata-input-text,
-.is-mobile .modal input.metadata-input-text,
-.workspace-drawer input[type=date],
-.is-mobile .modal input[type=date],
-.workspace-drawer input[type=datetime-local],
-.is-mobile .modal input[type=datetime-local],
-.workspace-drawer input[type=text],
-.is-mobile .modal input[type=text],
-.workspace-drawer input[type=search],
-.is-mobile .modal input[type=search],
-.workspace-drawer input[type=email],
-.is-mobile .modal input[type=email],
-.workspace-drawer input[type=password],
-.is-mobile .modal input[type=password],
-.workspace-drawer input[type=number],
-.is-mobile .modal input[type=number] {
+.workspace-drawer textarea:not(.metadata-container *), .is-mobile .modal textarea:not(.metadata-container *),
+.workspace-drawer input.metadata-input-text:not(.metadata-container *),
+.is-mobile .modal input.metadata-input-text:not(.metadata-container *),
+.workspace-drawer input[type=date]:not(.metadata-container *),
+.is-mobile .modal input[type=date]:not(.metadata-container *),
+.workspace-drawer input[type=datetime-local]:not(.metadata-container *),
+.is-mobile .modal input[type=datetime-local]:not(.metadata-container *),
+.workspace-drawer input[type=text]:not(.metadata-container *),
+.is-mobile .modal input[type=text]:not(.metadata-container *),
+.workspace-drawer input[type=search]:not(.metadata-container *),
+.is-mobile .modal input[type=search]:not(.metadata-container *),
+.workspace-drawer input[type=email]:not(.metadata-container *),
+.is-mobile .modal input[type=email]:not(.metadata-container *),
+.workspace-drawer input[type=password]:not(.metadata-container *),
+.is-mobile .modal input[type=password]:not(.metadata-container *),
+.workspace-drawer input[type=number]:not(.metadata-container *),
+.is-mobile .modal input[type=number]:not(.metadata-container *) {
   border: 1px solid var(--background-modifier-border);
 }
 
@@ -4960,7 +4980,7 @@ li[data-task=l] > p > input:checked {
 input[type=checkbox]:checked[data-task=l]:after,
 li[data-task=l] > input:checked:after,
 li[data-task=l] > p > input:checked:after {
-  background-color: var(--location-chbox-color);
+  background-color: var(--location-chbx-color);
   -webkit-mask-position: 50% 50%;
   -webkit-mask-size: 100%;
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg fill='none' height='100%25' viewBox='0 0 20 20' width='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath clip-rule='evenodd' d='m5.05025 4.05025c2.73367-2.73367 7.16585-2.73367 9.89945 0 2.7337 2.73367 2.7337 7.16585 0 9.89945l-4.9497 4.9498-4.94975-4.9498c-2.73367-2.7336-2.73367-7.16578 0-9.89945zm4.94975 6.94975c1.1046 0 2-.8954 2-2 0-1.10457-.8954-2-2-2-1.10457 0-2 .89543-2 2 0 1.1046.89543 2 2 2z' fill='currentColor' fill-rule='evenodd'/%3E%3C/svg%3E");
@@ -5214,7 +5234,7 @@ li.task-list-item[data-task="-"] {
 
 /*────────── Callout ──────────*/
 .markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] {
-  contain: unset !important;
+  contain: layout !important;
 }
 
 .markdown-source-view.mod-cm6 .cm-embed-block:not(.cm-table-widget):hover {
@@ -5222,7 +5242,7 @@ li.task-list-item[data-task="-"] {
 }
 
 .callout {
-  background-color: color-mix(in srgb, rgba(var(--callout-color)) var(--callout-color-opacity), var(--editor-bg-color));
+  background-color: color-mix(in srgb, var(--callout-color) var(--callout-color-opacity), var(--editor-bg-color));
   padding: 0;
   box-shadow: var(--callout-container-shadow);
 }
@@ -5287,33 +5307,33 @@ body {
   --callout-icon-example: scroll-text;
   --callout-icon-quote: message-square-note;
   --callout-icon-cite: book-marked;
-  --callout-rgb-general: 182, 196, 182;
-  --callout-rgb-note: 200, 175, 155;
-  --callout-rgb-summary: 234, 181, 52;
-  --callout-rgb-abstract: 34, 152, 225;
-  --callout-rgb-tldr: 240, 180, 225;
-  --callout-rgb-info: 71, 162, 187;
-  --callout-rgb-todo: 58, 173, 252;
-  --callout-rgb-tip: 70, 206, 185;
-  --callout-rgb-hint: 70, 206, 185;
-  --callout-rgb-important: 246, 113, 118;
-  --callout-rgb-success: 87, 200, 83;
-  --callout-rgb-check: 87, 200, 83;
-  --callout-rgb-done: 87, 200, 83;
-  --callout-rgb-question: 130, 190, 235;
-  --callout-rgb-help: 250, 128, 96;
-  --callout-rgb-faq: 130, 190, 235;
-  --callout-rgb-warning: 255, 161, 32;
-  --callout-rgb-caution: 255, 161, 32;
-  --callout-rgb-attention: 255, 161, 32;
-  --callout-rgb-fail: 226, 72, 86;
-  --callout-rgb-missing: 226, 72, 86;
-  --callout-rgb-danger: 226, 72, 86;
-  --callout-rgb-error: 226, 72, 86;
-  --callout-rgb-bug: 153, 93, 133;
-  --callout-rgb-example: 216, 141, 130;
-  --callout-rgb-quote: 173, 214, 171;
-  --callout-rgb-cite: 237, 217, 162;
+  --callout-rgb-general: rgb(182, 196, 182);
+  --callout-rgb-note: rgb(200, 175, 155);
+  --callout-rgb-summary: rgb(234, 181, 52);
+  --callout-rgb-abstract: rgb(34, 152, 225);
+  --callout-rgb-tldr: rgb(240, 180, 225);
+  --callout-rgb-info: rgb(71, 162, 187);
+  --callout-rgb-todo: rgb(58, 173, 252);
+  --callout-rgb-tip: rgb(70, 206, 185);
+  --callout-rgb-hint: rgb(70, 206, 185);
+  --callout-rgb-important: rgb(246, 113, 118);
+  --callout-rgb-success: rgb(87, 200, 83);
+  --callout-rgb-check: rgb(87, 200, 83);
+  --callout-rgb-done: rgb(87, 200, 83);
+  --callout-rgb-question: rgb(130, 190, 235);
+  --callout-rgb-help: rgb(250, 128, 96);
+  --callout-rgb-faq: rgb(130, 190, 235);
+  --callout-rgb-warning: rgb(255, 161, 32);
+  --callout-rgb-caution: rgb(255, 161, 32);
+  --callout-rgb-attention: rgb(255, 161, 32);
+  --callout-rgb-fail: rgb(226, 72, 86);
+  --callout-rgb-missing: rgb(226, 72, 86);
+  --callout-rgb-danger: rgb(226, 72, 86);
+  --callout-rgb-error: rgb(226, 72, 86);
+  --callout-rgb-bug: rgb(153, 93, 133);
+  --callout-rgb-example: rgb(216, 141, 130);
+  --callout-rgb-quote: rgb(173, 214, 171);
+  --callout-rgb-cite: rgb(237, 217, 162);
 }
 
 .callout {
@@ -5466,7 +5486,7 @@ video {
 }
 
 .markdown-preview-view .math-block {
-  overflow: scroll;
+  overflow: auto;
   width: 100%;
 }
 
@@ -5479,11 +5499,15 @@ body.embed-hide-title .embed-title {
 .view-header {
   --header-height: 38px;
 }
-.view-header .view-action.clickable-icon:nth-child(3n+1):hover {
-  color: var(--alternating-color-1);
+@media (hover: hover) {
+  .view-header .view-action.clickable-icon:nth-child(3n+1):hover {
+    color: var(--alternating-color-1);
+  }
 }
-.view-header .view-action.clickable-icon:nth-child(3n+1).mod-filled:hover svg {
-  fill: var(--alternating-color-1);
+@media (hover: hover) {
+  .view-header .view-action.clickable-icon:nth-child(3n+1).mod-filled:hover svg {
+    fill: var(--alternating-color-1);
+  }
 }
 .view-header .view-action.clickable-icon:nth-child(3n+1):active, .view-header .view-action.clickable-icon:nth-child(3n+1).has-active-menu {
   color: var(--alternating-color-1-hover-active);
@@ -5491,11 +5515,15 @@ body.embed-hide-title .embed-title {
 .view-header .view-action.clickable-icon:nth-child(3n+1).mod-filled:active svg {
   fill: var(--alternating-color-1-hover-active);
 }
-.view-header .view-action.clickable-icon:nth-child(3n+2):hover {
-  color: var(--alternating-color-2);
+@media (hover: hover) {
+  .view-header .view-action.clickable-icon:nth-child(3n+2):hover {
+    color: var(--alternating-color-2);
+  }
 }
-.view-header .view-action.clickable-icon:nth-child(3n+2).mod-filled:hover svg {
-  fill: var(--alternating-color-2);
+@media (hover: hover) {
+  .view-header .view-action.clickable-icon:nth-child(3n+2).mod-filled:hover svg {
+    fill: var(--alternating-color-2);
+  }
 }
 .view-header .view-action.clickable-icon:nth-child(3n+2):active, .view-header .view-action.clickable-icon:nth-child(3n+2).has-active-menu {
   color: var(--alternating-color-2-hover-active);
@@ -5503,16 +5531,20 @@ body.embed-hide-title .embed-title {
 .view-header .view-action.clickable-icon:nth-child(3n+2).mod-filled:active svg {
   fill: var(--alternating-color-2-hover-active);
 }
-.view-header .view-action.clickable-icon:nth-child(3n+3):hover {
-  color: var(--alternating-color-3);
+@media (hover: hover) {
+  .view-header .view-action.clickable-icon:nth-child(3n+3):hover {
+    color: var(--alternating-color-3);
+  }
 }
-.view-header .view-action.clickable-icon:nth-child(3n+3).mod-filled:hover svg {
-  fill: var(--alternating-color-3);
+@media (hover: hover) {
+  .view-header .view-action.clickable-icon:nth-child(3n+3).mod-filled:hover svg {
+    fill: var(--alternating-color-3);
+  }
 }
 .view-header .view-action.clickable-icon:nth-child(3n+3):active, .view-header .view-action.clickable-icon:nth-child(3n+3).has-active-menu {
   color: var(--alternating-color-3-hover-active);
 }
-.view-header .view-action.clickable-icon:nth-child(3n+3).mod-filled:hover svg {
+.view-header .view-action.clickable-icon:nth-child(3n+3).mod-filled:active svg {
   fill: var(--alternating-color-3-hover-active);
 }
 

@@ -28,10 +28,13 @@ body:is(.is-phone, .is-mobile) {
 // .clickable-icon
 .is-mobile .clickable-icon,
 .clickable-icon {
-    &:hover {
-        color: var(--icon-color-hover);
-        background: var(--icon-bg-hover);
-        cursor: var(--cursor);
+    // only real pointers: on touch screens :hover sticks after a tap
+    @media (hover: hover) {
+        &:hover {
+            color: var(--icon-color-hover);
+            background: var(--icon-bg-hover);
+            cursor: var(--cursor);
+        }
     }
 
     &:active {
