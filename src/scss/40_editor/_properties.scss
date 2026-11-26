@@ -89,6 +89,18 @@ body .metadata-property-icon svg {
     font-size: var(--font-small);
 }
 
+// Obsidian's mobile CSS widens .metadata-content by 24px, shifts it 12px
+// left and gives it its own background. That suits the default theme's
+// unpadded properties box, but with Primary's padded, bordered box it
+// spills out past the border on both sides. Keep it inside the box.
+// (.metadata-container is there to also beat the .mod-rtl variant.)
+body.is-mobile .metadata-container .metadata-content {
+    transform: none;
+    width: auto;
+    background-color: transparent;
+    padding: 0;
+}
+
 .metadata-property {
     // gap: var(--size-2-1);
 

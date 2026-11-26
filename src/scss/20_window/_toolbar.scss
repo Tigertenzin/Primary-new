@@ -1,9 +1,41 @@
 /*────────── Toolbar ──────────*/
 
-.mobile-toolbar {
-    width: auto;
-    background: var(--mobile-toolbar-bg);
-    border: 1px solid var(--background-modifier-border);
-    border-radius: var(--radius-l);
-    margin: calc(-1 * var(--size-2-3)) var(--size-4-2) var(--size-4-2) var(--size-4-2);
+/*  Since Obsidian 1.9 the mobile toolbar is built as:
+
+    .mobile-toolbar                         (absolutely positioned, full width)
+    └ .mobile-toolbar-options-container
+      ├ .mobile-toolbar-options-list-container.mod-raised
+      │ └ .mobile-toolbar-options-list      (the horizontal scroller)
+      └ .mobile-toolbar-floating-options.mod-raised   (iOS keyboard toggle)
+
+    The outer .mobile-toolbar must keep Obsidian's own sizing. Giving it
+    `width: auto` (as Primary used to) shrink-wraps it to the width of all
+    its buttons, so the list never overflows and can't be scrolled
+    (#282, #285, #288), and its border/background drew a second box around
+    the toolbar on iPad (#290). Primary's card style now goes on the inner
+    pills instead.
+
+    With the iOS floating navigation (`.is-floating-nav`) Obsidian draws
+    translucent "raised" pills; those are left as they are so the blur
+    still shows through. */
+
+body:not(.is-floating-nav) {
+    /* keep Primary's side gutter without resizing .mobile-toolbar itself */
+    .mobile-toolbar-options-container {
+        width: calc(100% - 2 * var(--size-4-2));
+    }
+
+    .mobile-toolbar-options-list-container,
+    .mobile-toolbar-floating-options {
+        background-color: var(--mobile-toolbar-bg);
+        /* a shadow-ring instead of a border, so both pills keep
+           Obsidian's height and stay vertically aligned */
+        box-shadow: 0 0 0 1px var(--background-modifier-border);
+        border-radius: var(--radius-l);
+    }
+
+    .mobile-toolbar-options-list {
+        background-color: transparent;
+        border-radius: var(--radius-l);
+    }
 }
