@@ -19,6 +19,7 @@
 > - New Style Settings switch to turn off Primary's alternative checkbox styling (upstream #255, PR #259)
 > - Settings and pin buttons at the bottom of the iPad sidebar are round glass buttons again, without white corner bits
 > - Bases support: tables match Primary's markdown tables, cards and kanban boards use Primary's card and lane styling
+> - iPhone: no stray line under the floating note header; back/forward/new-tab/tabs icons in the bottom bar are full size again
 
 ![Primary for Obsidian Overview](https://github.com/primary-theme/obsidian/blob/main/assets/obsidian-overview-header.png)
 <h1 align="center">Primary for <a href="https://obsidian.md">Obsidian</a></h1>

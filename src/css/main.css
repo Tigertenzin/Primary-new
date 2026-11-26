@@ -3056,6 +3056,13 @@ body:not(.is-phone) .workspace:is(.is-right-sidedock-open):not(.is-left-sidedock
   box-shadow: var(--navbar-shadow);
 }
 
+body .mobile-navbar-action .clickable-icon svg:is(.lucide-chevron-left,
+.lucide-chevron-right,
+.lucide-plus,
+.tab-frame) {
+  --icon-size: inherit;
+}
+
 /*────────── Toolbar ──────────*/
 /*  Since Obsidian 1.9 the mobile toolbar is built as:
 
@@ -5653,6 +5660,10 @@ body.is-mobile .empty-state-action:hover {
 body.is-mobile .empty-state-action:active {
   opacity: var(--button-opacity-active);
   transform: unset;
+}
+
+.is-mobile.is-floating-nav.is-phone .view-header {
+  border-bottom-color: transparent;
 }
 
 /*────────── Headings ──────────*/

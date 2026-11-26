@@ -250,3 +250,9 @@ body.is-mobile {
         }
     }
 }
+// iPhone floating navigation: the note header is just floating buttons over
+// the note, so Primary's header border became a stray line across the
+// content (e.g. through banners). Hide it there.
+.is-mobile.is-floating-nav.is-phone .view-header {
+    border-bottom-color: transparent;
+}

@@ -4,3 +4,17 @@
     border-top: 1px solid var(--background-modifier-border);
     box-shadow: var(--navbar-shadow);
 }
+// Bottom navbar icons. Obsidian sizes them at 26px (set on
+// .mobile-navbar-actions), but Primary's mobile rule shrinks every
+// clickable-icon svg to --icon-m. Primary's custom search and menu icons
+// still look full-sized because their glyphs are drawn larger; the thin
+// lucide ones (back, forward, new tab, tab count) end up tiny next to them.
+// Let those inherit the navbar's own size again.
+body .mobile-navbar-action .clickable-icon svg:is(
+    .lucide-chevron-left,
+    .lucide-chevron-right,
+    .lucide-plus,
+    .tab-frame
+) {
+    --icon-size: inherit;
+}
