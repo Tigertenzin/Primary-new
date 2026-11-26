@@ -1,5 +1,5 @@
 > [!NOTE]
-> **Primary Revived** is an unofficial fork of [Primary](https://github.com/primary-theme/obsidian) by Cecilia May, with fixes for newer Obsidian versions (especially on mobile). It shows up in Obsidian as a separate theme, "Primary Revived", and uses the same Style Settings IDs, so your existing Primary settings carry over.
+> **Primary-new** is an unofficial fork of [Primary](https://github.com/primary-theme/obsidian) by Cecilia May, with fixes for newer Obsidian versions (especially on mobile). It shows up in Obsidian as a separate theme, "Primary-new", and uses the same Style Settings IDs, so your existing Primary settings carry over.
 >
 > **Install with [BRAT](https://github.com/TfTHacker/obsidian42-brat):** BRAT → *Add beta theme* → paste this repository's URL.
 >
