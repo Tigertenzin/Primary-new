@@ -6197,6 +6197,61 @@ a.tag:active {
   box-shadow: var(--tag-shadow-active);
 }
 
+/*────────── Bases ──────────*/
+/*  Bases (Obsidian 1.9+) is styled almost entirely through --bases-*
+    variables. These map them onto the styling Primary already uses
+    elsewhere, so Bases follows the palette and any Style Settings changes:
+
+    - tables look like Primary's markdown tables (tinted bold header,
+      lighter cells)
+    - cards and kanban cards use Primary's raised card style from the
+      Kanban plugin styling; kanban columns use its lanes
+
+    Callouts and the sidebar keep Obsidian's own overrides, since those are
+    set on .callout / .mod-sidedock and win over body. */
+body {
+  /* Table */
+  --bases-table-header-background: var(--table-header-background);
+  --bases-table-header-background-hover: color-mix(in srgb, var(--table-header-background), var(--text-normal) 6%);
+  --bases-table-header-color: var(--text-normal);
+  --bases-table-header-weight: var(--font-semibold);
+  --bases-table-summary-background: var(--table-header-background);
+  --bases-table-summary-background-hover: var(--bases-table-header-background-hover);
+  --bases-table-row-background-hover: color-mix(in srgb, var(--table-header-background) 50%, var(--table-background));
+  /* Cards */
+  --bases-cards-background: var(--kanban-item-bg);
+  --bases-cards-shadow: var(--kanban-item-shadow);
+  --bases-cards-shadow-hover: var(--kanban-item-shadow), var(--shadow-s);
+  --bases-cards-cover-background: var(--table-header-background);
+  /* Kanban */
+  --bases-kanban-column-background: var(--kanban-lane-bg);
+  --bases-kanban-card-background: var(--kanban-item-bg);
+  --bases-kanban-card-shadow: var(--kanban-item-shadow);
+  --bases-kanban-card-shadow-hover: var(--kanban-item-shadow), var(--shadow-s);
+  --bases-kanban-cover-background: var(--table-header-background);
+}
+
+/* Obsidian paints the table body with --background-primary directly (no
+   variable), so give it Primary's table cell colour here. */
+.bases-tbody {
+  background: var(--table-background);
+}
+
+/* Kanban: same lane border and count pill as Primary's Kanban plugin styling */
+.bases-kanban-column {
+  border: var(--kanban-lane-border);
+}
+
+.bases-kanban-column-count {
+  font-size: 0.8em;
+  font-weight: var(--font-semibold);
+  font-variant: tabular-nums;
+  color: var(--kanban-title-count-color);
+  background: var(--kanban-title-count-bg);
+  padding: var(--size-2-1) var(--size-4-2);
+  border-radius: var(--kanban-title-count-radius);
+}
+
 /*────────── Core Plugin: Bookmark ──────────*/
 [data-type=bookmarks] .tree-item .tree-item-self.mod-collapsible {
   color: var(--nav-folder-color);
