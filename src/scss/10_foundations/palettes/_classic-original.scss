@@ -850,8 +850,8 @@ body {
     --checked-border-color: rgba(0, 0, 0, 0.15);
     --checked-border-color-hover: rgba(0, 0, 0, 0.1);
 
-    --checkbox-border-color: var(--color-l-gray-60);
-    --checkbox-border-color-hover: var(--color-l-gray-70);
+    --checkbox-border-color: var(--color-l-gray-70);
+    --checkbox-border-color-hover: var(--color-l-gray-80);
 
     --checklist-bg: var(--color-l-gray-10);
     --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.07);
@@ -1122,8 +1122,10 @@ body {
     --editor-bgpattern-color: var(--color-l-gray-60);
 
     /* Blockquote */
-    --blockquote-border-color: var(--background-modifier-border);
-    --blockquote-background-color: var(--color-l-gray-10);
+    /* a warm tint of the page and a clearer bar, instead of a near-white
+       box that didn't match the palette (upstream #272) */
+    --blockquote-border-color: var(--color-l-gray-70);
+    --blockquote-background-color: var(--color-l-alpha-gray);
 
     /* Callout */
     --callout-color-opacity: 32.5%;
@@ -1981,8 +1983,8 @@ body {
     --checked-border-color: rgba(255, 255, 255, 0.15);
     --checked-border-color-hover: rgba(255, 255, 255, 0.1);
 
-    --checkbox-border-color: var(--color-d-gray-70);
-    --checkbox-border-color-hover: var(--color-d-gray-60);
+    --checkbox-border-color: var(--color-d-gray-60);
+    --checkbox-border-color-hover: var(--color-d-gray-50);
 
     --checklist-bg: var(--color-d-gray-110);
     --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.3);
@@ -2258,8 +2260,12 @@ body {
     --editor-bgpattern-color: var(--color-d-gray-70);
 
     /* Blockquote */
-    --blockquote-border-color: var(--background-modifier-border);
-    --blockquote-background-color: var(--color-d-gray-120);
+    --blockquote-border-color: var(--color-d-gray-60);
+    --blockquote-background-color: var(--color-d-alpha-gray);
+
+    /* Horizontal Rule: the default border colour is barely visible on the
+       dark background (upstream #270) */
+    --hr-color: var(--color-d-gray-60);
 
     /* Callout */
     --callout-color-opacity: 32.5%;

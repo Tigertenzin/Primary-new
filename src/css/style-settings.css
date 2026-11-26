@@ -1729,16 +1729,16 @@ settings:
         title: Blockquote Border Color
         format: hsl
         opacity: true
-        default-light: 'hsla(37, 38%, 83%, 1)'
-        default-dark: 'hsla(28, 22%, 18%, 1)'
+        default-light: 'hsla(34, 37%, 70%, 1)'
+        default-dark: 'hsla(33, 27%, 33%, 1)'
     -
         id: blockquote-background-color
         type: variable-themed-color
         title: Blockquote Background Color
         format: hsl
         opacity: true
-        default-light: 'hsla(36, 38%, 98%, 1)'
-        default-dark: 'hsla(29, 16%, 12%, 1)'
+        default-light: 'hsla(34, 37%, 70%, 0.15)'
+        default-dark: 'hsla(34, 24%, 40%, 0.2)'
 	-
 		id: nf_list
 		type: heading

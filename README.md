@@ -20,6 +20,9 @@
 > - Settings and pin buttons at the bottom of the iPad sidebar are round glass buttons again, without white corner bits
 > - Bases support: tables match Primary's markdown tables, cards and kanban boards use Primary's card and lane styling
 > - iPhone: no stray line under the floating note header; back/forward/new-tab/tabs icons in the bottom bar are full size again
+> - Blockquotes use a warm tint of the page with a clearer bar instead of a near-white box (upstream #272)
+> - Unticked task checkboxes have stronger borders; the `---` divider is easier to see in dark mode (upstream #276, #270)
+> - Bases cards and kanban cards lift slightly on hover, like Primary's buttons
 
 ![Primary for Obsidian Overview](https://github.com/primary-theme/obsidian/blob/main/assets/obsidian-overview-header.png)
 <h1 align="center">Primary for <a href="https://obsidian.md">Obsidian</a></h1>

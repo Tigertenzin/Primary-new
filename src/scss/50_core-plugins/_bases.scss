@@ -56,3 +56,25 @@ body {
     padding: var(--size-2-1) var(--size-4-2);
     border-radius: var(--kanban-title-count-radius);
 }
+
+/* Cards lift slightly on hover and press back down on click, like Primary's
+   buttons and tabs. Uses `translate` rather than `transform`, so it adds to
+   whatever Obsidian uses to position the cards instead of replacing it.
+   Only on devices that can hover, so the lift doesn't stick after a tap. */
+.bases-cards-item,
+.bases-kanban-card:not(.is-being-dragged, .mod-dragged-item) {
+    transition: box-shadow var(--anim-duration-fast) ease-in-out,
+                translate var(--button-anim);
+}
+
+@media (hover: hover) {
+    .bases-cards-item:hover,
+    .bases-kanban-card:not(.is-being-dragged, .mod-dragged-item):hover {
+        translate: 0 calc(-1 * var(--button-axis-offset));
+    }
+}
+
+.bases-cards-item:active,
+.bases-kanban-card:not(.is-being-dragged, .mod-dragged-item):active {
+    translate: 0 0;
+}

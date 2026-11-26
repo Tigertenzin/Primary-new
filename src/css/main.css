@@ -1370,8 +1370,8 @@ body.is-mobile {
   --checkbox-color-hover: var(--color-l-green-20);
   --checked-border-color: rgba(0, 0, 0, 0.15);
   --checked-border-color-hover: rgba(0, 0, 0, 0.1);
-  --checkbox-border-color: var(--color-l-gray-60);
-  --checkbox-border-color-hover: var(--color-l-gray-70);
+  --checkbox-border-color: var(--color-l-gray-70);
+  --checkbox-border-color-hover: var(--color-l-gray-80);
   --checklist-bg: var(--color-l-gray-10);
   --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.07);
   --checklist-done-color: var(--color-l-gray-80);
@@ -1605,8 +1605,10 @@ body.is-mobile {
   --editor-bg-color: var(--background-primary);
   --editor-bgpattern-color: var(--color-l-gray-60);
   /* Blockquote */
-  --blockquote-border-color: var(--background-modifier-border);
-  --blockquote-background-color: var(--color-l-gray-10);
+  /* a warm tint of the page and a clearer bar, instead of a near-white
+     box that didn't match the palette (upstream #272) */
+  --blockquote-border-color: var(--color-l-gray-70);
+  --blockquote-background-color: var(--color-l-alpha-gray);
   /* Callout */
   --callout-color-opacity: 32.5%;
   --callout-border-opacity: 0.2;
@@ -2299,8 +2301,8 @@ body.is-mobile {
   --checkbox-color-hover: var(--color-d-green-30);
   --checked-border-color: rgba(255, 255, 255, 0.15);
   --checked-border-color-hover: rgba(255, 255, 255, 0.1);
-  --checkbox-border-color: var(--color-d-gray-70);
-  --checkbox-border-color-hover: var(--color-d-gray-60);
+  --checkbox-border-color: var(--color-d-gray-60);
+  --checkbox-border-color-hover: var(--color-d-gray-50);
   --checklist-bg: var(--color-d-gray-110);
   --checklist-shadow-hover: 0px 0px 0px 3px rgba(0, 0, 0, 0.3);
   --checklist-done-color: var(--color-d-gray-50);
@@ -2538,8 +2540,11 @@ body.is-mobile {
   --editor-bg-color: var(--background-primary);
   --editor-bgpattern-color: var(--color-d-gray-70);
   /* Blockquote */
-  --blockquote-border-color: var(--background-modifier-border);
-  --blockquote-background-color: var(--color-d-gray-120);
+  --blockquote-border-color: var(--color-d-gray-60);
+  --blockquote-background-color: var(--color-d-alpha-gray);
+  /* Horizontal Rule: the default border colour is barely visible on the
+     dark background (upstream #270) */
+  --hr-color: var(--color-d-gray-60);
   /* Callout */
   --callout-color-opacity: 32.5%;
   --callout-border-opacity: 0.1;
@@ -6261,6 +6266,26 @@ body {
   background: var(--kanban-title-count-bg);
   padding: var(--size-2-1) var(--size-4-2);
   border-radius: var(--kanban-title-count-radius);
+}
+
+/* Cards lift slightly on hover and press back down on click, like Primary's
+   buttons and tabs. Uses `translate` rather than `transform`, so it adds to
+   whatever Obsidian uses to position the cards instead of replacing it.
+   Only on devices that can hover, so the lift doesn't stick after a tap. */
+.bases-cards-item,
+.bases-kanban-card:not(.is-being-dragged, .mod-dragged-item) {
+  transition: box-shadow var(--anim-duration-fast) ease-in-out, translate var(--button-anim);
+}
+
+@media (hover: hover) {
+  .bases-cards-item:hover,
+  .bases-kanban-card:not(.is-being-dragged, .mod-dragged-item):hover {
+    translate: 0 calc(-1 * var(--button-axis-offset));
+  }
+}
+.bases-cards-item:active,
+.bases-kanban-card:not(.is-being-dragged, .mod-dragged-item):active {
+  translate: 0 0;
 }
 
 /*────────── Core Plugin: Bookmark ──────────*/
