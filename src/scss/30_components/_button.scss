@@ -155,6 +155,22 @@ body.is-phone .modal-close-button.mod-raised {
     }
 }
 
+// Tablet drawer footer (settings + pin). Obsidian draws these as round glass
+// buttons using --clickable-icon-radius, which Obsidian sets to a circle on
+// mobile. Primary's smaller mobile radius turned them into rounded squares
+// whose glass rim no longer lined up, leaving white bits at the corners.
+// Give them their round shape back, like the other glass buttons.
+.is-mobile .workspace-drawer-header-icon.mod-raised {
+    border-radius: var(--touch-size-m);
+}
+
+// The iOS glass rim is drawn by ::after with `border-radius: inherit`, but
+// not the corner shape, so on squircle (superellipse) buttons the rim pokes
+// out at the corners. Make it follow the button's shape exactly.
+.is-mobile .mod-raised::after {
+    corner-shape: inherit;
+}
+
 // Property Box Add Property Button
 .metadata-container .metadata-add-button {
     font-weight: var(--component-font-weight);

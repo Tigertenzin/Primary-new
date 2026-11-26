@@ -15,6 +15,9 @@
 > - Mobile sidebar properties: no stray boxes around names and dates (upstream #262)
 > - Clicking or arrowing below a Tasks query with `hide toolbar`/`hide task count` lands on the right line (upstream #294)
 > - Math blocks only show a scrollbar when the formula overflows (upstream PR #261)
+> - Link hover colours (and non-markdown link / collapsed list marker colours) in Style Settings now take effect (upstream #284, #289)
+> - New Style Settings switch to turn off Primary's alternative checkbox styling (upstream #255, PR #259)
+> - Settings and pin buttons at the bottom of the iPad sidebar are round glass buttons again, without white corner bits
 
 ![Primary for Obsidian Overview](https://github.com/primary-theme/obsidian/blob/main/assets/obsidian-overview-header.png)
 <h1 align="center">Primary for <a href="https://obsidian.md">Obsidian</a></h1>
