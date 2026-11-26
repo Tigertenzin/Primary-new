@@ -1,4 +1,4 @@
-# Taken from https://docs.obsidian.md/Themes/App+themes/Release+your+theme+with+GitHub+Actions
+# Based on https://docs.obsidian.md/Themes/App+themes/Release+your+theme+with+GitHub+Actions
 name: Release Obsidian Theme
 
 on:
@@ -9,17 +9,26 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
 
-      - name: Create release
+      # Creates the release for a pushed tag. If the release was already
+      # made by hand (gh release create also pushes the tag, which triggers
+      # this workflow), just make sure its files are the tagged ones.
+      - name: Create or update release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           tag="${GITHUB_REF#refs/tags/}"
 
-          gh release create "$tag" \
-            --title="$tag" \
-            --generate-notes \
-            manifest.json theme.css
+          if gh release view "$tag" > /dev/null 2>&1; then
+            gh release upload "$tag" manifest.json theme.css --clobber
+          else
+            gh release create "$tag" \
+              --title="$tag" \
+              --generate-notes \
+              manifest.json theme.css
+          fi
