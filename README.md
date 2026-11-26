@@ -1,3 +1,14 @@
+> [!NOTE]
+> **Primary Revived** is an unofficial fork of [Primary](https://github.com/primary-theme/obsidian) by Cecilia May, with fixes for newer Obsidian versions (especially on mobile). It shows up in Obsidian as a separate theme, "Primary Revived", and uses the same Style Settings IDs, so your existing Primary settings carry over.
+>
+> **Install with [BRAT](https://github.com/TfTHacker/obsidian42-brat):** BRAT → *Add beta theme* → paste this repository's URL.
+>
+> **Build:** `npm ci && npm run build` (uses Dart Sass; the Grunt `sass` task needs the old Ruby Sass).
+>
+> Changes in this fork:
+> - Mobile toolbar scrolls again and is no longer drawn as a double box on iPad (upstream #282, #285, #288, #290)
+> - Properties box on mobile: inner panel no longer spills past the border
+
 ![Primary for Obsidian Overview](https://github.com/primary-theme/obsidian/blob/main/assets/obsidian-overview-header.png)
 <h1 align="center">Primary for <a href="https://obsidian.md">Obsidian</a></h1>
 <p align="center">

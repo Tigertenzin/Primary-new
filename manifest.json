@@ -1,8 +1,9 @@
 {
-  "name": "Primary",
-  "version": "2.10.0",
-  "minAppVersion": "1.4.0",
-  "author": "Cecilia May",
+  "name": "Primary Revived",
+  "version": "2.10.1",
+  "minAppVersion": "1.9.0",
+  "author": "Cecilia May (fork maintained by Tigertenzin)",
+  "authorUrl": "https://github.com/Tigertenzin",
   "fundingUrl": {
     "Ko-fi": "https://ko-fi.com/ceciliamay"
   }
