@@ -237,5 +237,28 @@ for (const [name, p] of Object.entries(PALETTES)) {
         scss += Object.entries(vars).map(([k, v]) => `    ${k}: ${v};`).join('\n') + '\n}\n';
     }
 }
+/*  "Use Palette Accent" (body class palette-accent): Obsidian applies its
+    Appearance → Accent color as inline styles on <body>, which beat any
+    theme rule. With this switch on, the palette's accent wins instead, via
+    !important. Primary Classic's own accent comes first (no palette class
+    needed); a palette's rule is more specific, so it wins when selected. */
+const classicAccent = mode => {
+    const block = CLASSIC.slice(CLASSIC.indexOf(mode === 'l' ? '.theme-light {' : '.theme-dark {'));
+    const get = k => block.match(new RegExp(`--accent-${k}: ([^;]+);`))[1];
+    return { '--accent-h': get('h'), '--accent-s': get('s'), '--accent-l': get('l') };
+};
+const important = (sel, vars, mode) =>
+    `${sel} {\n` + Object.entries({ ...vars, '--text-on-accent': `var(--color-${mode}-gray-10)` })
+        .map(([k, v]) => `    ${k}: ${v} !important;`).join('\n') + '\n}\n';
+scss += `\n/*────────── Use Palette Accent ──────────*/\n`;
+for (const [mode, key] of [['l', 'light'], ['d', 'dark']]) {
+    scss += `\n/* Primary Classic, ${key} */\n` + important(`body.theme-${key}.palette-accent`, classicAccent(mode), mode);
+    for (const [name, p] of Object.entries(PALETTES)) {
+        const v = build(p[key], mode, p);
+        const acc = { '--accent-h': v['--accent-h'], '--accent-s': v['--accent-s'], '--accent-l': v['--accent-l'] };
+        scss += `\n/* ${p.label}, ${key} */\n` + important(`body.theme-${key}.palette-accent.palette-${name}`, acc, mode);
+    }
+}
+
 fs.writeFileSync(OUT, scss);
 console.log(`wrote ${path.relative(ROOT, OUT)} (${Object.keys(PALETTES).join(', ')})`);

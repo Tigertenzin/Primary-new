@@ -515,3 +515,53 @@ body.theme-dark.palette-rosepine {
     --accent-s: 57%;
     --accent-l: 58%;
 }
+
+/*────────── Use Palette Accent ──────────*/
+
+/* Primary Classic, light */
+body.theme-light.palette-accent {
+    --accent-h: 31 !important;
+    --accent-s: 23% !important;
+    --accent-l: 50% !important;
+    --text-on-accent: var(--color-l-gray-10) !important;
+}
+
+/* Everforest, light */
+body.theme-light.palette-accent.palette-everforest {
+    --accent-h: 68 !important;
+    --accent-s: 99% !important;
+    --accent-l: 26% !important;
+    --text-on-accent: var(--color-l-gray-10) !important;
+}
+
+/* Rosé Pine, light */
+body.theme-light.palette-accent.palette-rosepine {
+    --accent-h: 268 !important;
+    --accent-s: 21% !important;
+    --accent-l: 54% !important;
+    --text-on-accent: var(--color-l-gray-10) !important;
+}
+
+/* Primary Classic, dark */
+body.theme-dark.palette-accent {
+    --accent-h: 31 !important;
+    --accent-s: 27% !important;
+    --accent-l: 24% !important;
+    --text-on-accent: var(--color-d-gray-10) !important;
+}
+
+/* Everforest, dark */
+body.theme-dark.palette-accent.palette-everforest {
+    --accent-h: 83 !important;
+    --accent-s: 34% !important;
+    --accent-l: 33% !important;
+    --text-on-accent: var(--color-d-gray-10) !important;
+}
+
+/* Rosé Pine, dark */
+body.theme-dark.palette-accent.palette-rosepine {
+    --accent-h: 267 !important;
+    --accent-s: 57% !important;
+    --accent-l: 58% !important;
+    --text-on-accent: var(--color-d-gray-10) !important;
+}

@@ -48,6 +48,12 @@ settings:
                 label: Rosé Pine
                 value: palette-rosepine
     -
+        id: palette-accent
+        title: Use Palette Accent
+        description: Use the palette's accent colour for buttons even if you've picked an Accent color in Settings → Appearance (which normally wins). With Primary Classic, this gives you Primary's own brown buttons back.
+        type: class-toggle
+        default: false
+    -
 		id: interface_typography
 		type: heading
 		level: 2
