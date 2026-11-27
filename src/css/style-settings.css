@@ -31,6 +31,23 @@ settings:
 		collapsed: true
 		title: Interface
     -
+        id: color-palette
+        type: class-select
+        title: Color Palette
+        description: Swap Primary's colours for another palette. Buttons use the palette's accent colour. Your own colour changes in Style Settings still apply on top.
+        allowEmpty: false
+        default: palette-classic
+        options:
+            -
+                label: Primary Classic
+                value: palette-classic
+            -
+                label: Everforest
+                value: palette-everforest
+            -
+                label: Rosé Pine
+                value: palette-rosepine
+    -
 		id: interface_typography
 		type: heading
 		level: 2
