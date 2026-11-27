@@ -60,16 +60,24 @@ body {
 /* Cards lift slightly on hover and press back down on click, like Primary's
    buttons and tabs. Uses `translate` rather than `transform`, so it adds to
    whatever Obsidian uses to position the cards instead of replacing it.
-   Only on devices that can hover, so the lift doesn't stick after a tap. */
+   Uses (any-hover: hover) rather than Obsidian's (hover: hover): an iPad
+   counts as a touch device even with a trackpad or mouse attached, so
+   (hover: hover) never matches there and cards showed no hover at all.
+   Phones and touch-only iPads still don't match, so nothing sticks after a tap. */
 .bases-cards-item,
 .bases-kanban-card:not(.is-being-dragged, .mod-dragged-item) {
     transition: box-shadow var(--anim-duration-fast) ease-in-out,
                 translate var(--button-anim);
 }
 
-@media (hover: hover) {
-    .bases-cards-item:hover,
+@media (any-hover: hover) {
+    .bases-cards-item:hover {
+        box-shadow: var(--bases-cards-shadow-hover);
+        translate: 0 calc(-1 * var(--button-axis-offset));
+    }
+
     .bases-kanban-card:not(.is-being-dragged, .mod-dragged-item):hover {
+        box-shadow: var(--bases-kanban-card-shadow-hover);
         translate: 0 calc(-1 * var(--button-axis-offset));
     }
 }
